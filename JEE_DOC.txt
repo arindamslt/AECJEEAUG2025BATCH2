@@ -1,3 +1,103 @@
 GITHUB LINK
 ========================================================================
 https://github.com/arindamslt/AECJEEAUG2025BATCH2.git
+DATE:06.08.2025
+=================================================================================================
+ADVANCED JAVA
+=============================================================
+JEE
+==========================================================
+JAVA ENTERPRISE EDITION
+TYPES OF APPLICATION
+================================================================================
+1.DESKTOP OR STAND ALONE APPLICATION
+2.WEB APPLICATION
+3.MOBILE APPLICATION
+================================================================================
+WEBSERVER
+APPLICATION SERVER
+SOFTWARE 
+===========================================
+JDK 17
+ECLISPE EE VERSION
+TOMCAT
+=====================================================
+WORKSPACE
+========================================================
+JEEAUGBATCH2
+=======================================================
+FILE===NEW ===DYNAMIC WEB PROJECT===JEEFRONTEND
+http://localhost:8080/JEE/Test.html
+HTML
+=================================================================================
+HYPER TEXT MARKUP LANGUAGE
+PURPOSE
+===================================================
+TO MAKE A STRUCTURE OF CONTENT IN WEB PAGE
+WEB PAGE
+============================
+IT IS AN ELECTRONIC PAGE TO CREATE THE CONTENT
+HTML
+============================================
+IT IS A COLLECTION OF ELEMENTS
+1.LIST ELEMENT
+2.TABLE ELEMENT
+3.IMAGE ELEMENT
+4.PARAGRAPH 
+5.IFRAME
+6.HEADING
+EACH ELEMENT IS REPRESENTED BY MEANS OF TAG
+=================================================
+TYPES OF TAG
+========================
+1.OPENING
+2.CLOSING
+3.SELF CLOSING
+<h1>    </h1>
+</IMG>
+A LANGUAGE IS CONSIDERED TO BE MARKUP IF THERE IS TAG,ATTRIBURE AND PARAMETER IS THERE
+
+TYPES OF LIST ELEMENT
+==========================================
+1.UNORDERED LIST
+2.ORDERED LIST
+3.DEFINATION LIST
+GOOGLE MAP INTEGRATION
+YOUTUBE INTEGRATION
+======================================================================
+NAVIGATION
+=======================================
+1.INTER NAVIGATION
+2.INTRA NAVIGATION
+=======================================================================
+CSS
+================================================================
+CASCADDING STYLE SHEET
+IT IS A STYLING LANGUAGE
+PROPERTIES
+=======================================================================
+KEY AND VALUE PAIR
+color:"red";
+TYPES OF CSS
+===============================================================================
+1.INLINE CSS
+2.INTERNAL CSS
+3.EXTERNAL CSS
+============================================================================
+DESIGN OR STYLE THE HTML ELEMENTS
+SELECTOR
+===================================================
+1.TAG NAME
+2.ID VALUE
+3.CLASS VALUE
+=========================================================================
+MARGIN PADDING BORDER
+======================================================================================
+
+
+
+
+
+
+
+
