@@ -93,6 +93,78 @@ SELECTOR
 =========================================================================
 MARGIN PADDING BORDER
 ======================================================================================
+DATE:07.08.2025
+======================================================================================
+BOOTSTRAP
+======================================================================================
+BOOTSTRAP IS A POWERFUL,SELF PACKED AND EXTENSIBLE FRONT END TOOL.
+PURPOSE
+================================
+FASTER DESIGN
+REPONSIVE DESIGN
+========================================================================================
+JAVASCRIPT
+==========================================================================================
+JAVASCRIPT IS PROGRAMMING LANGUAGE.BEFORE 2010 IT IS CONSIDERED TO BE A SCRIPTING 
+LANGUAGE.
+JAVASCRIPT CAN COMMUNICATE DATABASE .IT ALSO COMMUNICATE WITH WEBSERVER AND APPLICATION
+SERVER.
+PURPOSE
+===================================================================================
+1.CREATING DYNAMIC USER INTERFACE
+2.CLENT SIDE AND SERVER SIDE VALIDATION
+3.IT CAN COMMUNICATE FRONT END AND BACK END APPLICATION
+AREAS IN JAVASCRIPT
+============================================
+1.DESKTOP OR STAND ALONE APPLICATION
+2.WEB APPLICATION
+3.MACHINE LEARNING APP
+===============================================================
+VARIABLE
+====================================================
+PRIMITIVE TYPES:NUMBER,STRING,BOOLEAN,BIGINT,NULL,SYMBOL,UNDEFINED
+NON PRIMITIVE:OBJECT
+===========================================================================
+DECLARE VARIABLE
+===============================
+VAR
+LET
+CONST
+TYPES OF FUNCTION
+======================================================
+1.NORMAL FUNCTION OR CONCRETE FUNCTION
+2.PARAMETERISED FUNCTION
+3.ANNONYMOUS FUNCTION
+4.CALLBACK FUNCTION
+5.HIGHER ORDER FUNCTION
+6.FUNCTION EXPRESSION
+7.ARROW FUNCTION
+================================================================
+DOM
+==================================================================
+DOCUMENT OBJECT MODEL
+HTML===BROWSER  ENGINE====BYTES====TOKENS===OBJECTS(NODES)
+HTML DOCUMENT COVERTED INTO OBJECTS CALLED NODES.
+WHEN NODES ARE TREE LIKE DATASTRUCTURE THEN IT IS CALLED DOM.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
