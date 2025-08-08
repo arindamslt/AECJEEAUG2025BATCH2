@@ -1,0 +1,16 @@
+EMP TABLE DATA
+=============================================================================
+INSERT INTO EMP VALUES('E1','SUMAN','CLERK',25000,2000,CURRENT_DATE,'10');
+INSERT INTO EMP VALUES('E2','ALOKE','CLERK',27000,2500,CURRENT_DATE,'20');
+INSERT INTO EMP VALUES('E3','AYAN','MANAGER',50000,5000,'2024-07-25','10');
+INSERT INTO EMP VALUES('E4','JAYANTA','MANAGER',80000,10000,'2024-06-24','20');
+INSERT INTO EMP VALUES('E5','JYOTI','ANALYST',65000,4000,'2024-05-20','30');
+INSERT INTO EMP VALUES('E6','RUPALI','ANALYST',60000,4500,'2024-05-15','20');
+==============================================================================
+DEPT TABLE DATA
+==============================================================================
+INSERT INTO DEPT VALUES('10','MKTG','KOLKATA');
+INSERT INTO DEPT VALUES('20','FINANCE','MUMBAI');
+INSERT INTO DEPT VALUES('30','IT','DELHI');
+INSERT INTO DEPT VALUES('40','OPERATIONS','CHENNAI');
+==========================================================================================
