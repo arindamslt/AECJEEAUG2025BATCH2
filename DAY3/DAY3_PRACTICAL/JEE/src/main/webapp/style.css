@@ -1,0 +1,12 @@
+h2{
+	color: red;
+	background-color:yellow;
+	text-align: center;
+	font-size: 15px;
+}
+p{
+	color:green;
+	background-color: blue;
+	text-align: center;
+	font-size:10px;
+}

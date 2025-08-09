@@ -146,7 +146,98 @@ DOCUMENT OBJECT MODEL
 HTML===BROWSER  ENGINE====BYTES====TOKENS===OBJECTS(NODES)
 HTML DOCUMENT COVERTED INTO OBJECTS CALLED NODES.
 WHEN NODES ARE TREE LIKE DATASTRUCTURE THEN IT IS CALLED DOM.
+=================================================================
+DATE:08.08.2025
+====================================================================
+DATABASE
+=========================================================================
+SQL DATABASE
+================================================================
+ORACLE
+MYSQL
+SQLSERVER
+=========================================================================
+NO SQL DATABASE
+==========================================================
+MONGODB
+CASSANDRA
+NEO4J
+COUCHDB
+====================================================================
+DBMS===DATABASE MANAGEMENT SYSTEM
+RDBMS===RELATIONAL DATABASE MANAGEMENT SYSTEM
+DATABASE
+==========================================================
+DATA
+FIELDS
+RECORDS OR TUPLE
+TABLE
+DATABASE
+================================================================
+DATABASE IS COLLECTION OF INTERELATED TABLES OR DATA
+ADVANTAGE OF DBMS AND RDBMS
+========================================================
+1.MINIMIZE DATA REDUNDENCY
+2.DATA CAN BE SHARED
+3.SECURITY RESTRICTION PROVIDED
+4.INTIGRITY CONSTRAINT CAN BE MAINTAINED
+=============================================================
+RDBMS=DATABASE+SQL(STRUCTURED QUERY LANGUAGE)
+=================================================================
+JAVA
+======================================================================
+BOTH HOW PART AND WHAT KNOWN TO US
+HLL
+SELECT * FROM STUDENT;
+HOW PART IS NOT KNOWN TO US
+BUT WHAT PART IS KNOWN TO US
+IT IS NON PROCEDURAL LANGUAGE
+PL/SQL
+======================================================================
+COMMANDS IN SQL
+=======================================================================
+1.DDL==DATA DEFINATION LANGUAGE
+         CREATE,ALTER,RENAME,DROP,TRUNCATE,PURGE
+2.DML==DATA MANIPULATION LANGUAGE
+        INSERT,UPDATE,DELETE,MERGE
+3.DATA RETRIEVAL====SELECT
+4.TCL==TRANSACTION CONTROL LANGUAGE
+        COMMIT,ROLLBACK,SAVEPOINT
+5.DCL==DATA CONTROL LANGUAGE
+       GRANT,REVOKE
+=======================================================================
+DATA TYPES
+=======================================================================
+VARCHAR
+CHAR
+DECIMAL
+INT
+DATE================YYYY-MM-DD====2025-08-08
+TIMESTAMP
+SNAME CHAR(25)====
+SUMAN
+VARCHAR(25)
+========================================================================
+CONSTRAINT
+=========================================================================
 
+
+SERVLET
+==========================================================================
+SERVLET
+================================================================================
+SERVLET IS A SERVER SIDE PROGRAM.
+IT IS REQUEST RESPONSE ORIENETED PROGRAM
+import javax.servlet.*;
+import javax.servlet.http.*;
+IT IS NOTHING BUT A CLASS
+IT IS ACT AS AN CONTROLLER
+SERVLET LIFE CYCLE
+============================================
+init()
+service()
+destroy()
+===============================================
 
 
 

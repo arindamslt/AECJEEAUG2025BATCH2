@@ -1,0 +1,82 @@
+mysql>SHOW DATABASES;
+CREATE  DATABASE DBSTJEE;
+USE DBSTJEE;
+SHOW TABLES;
+CREATE TABLE CUSTOMER
+(CID VARCHAR(10),
+ CNAME VARCHAR(25),
+ CPHNO VARCHAR(10));
+DESC CUSTOMER;
+mysql> DESC CUSTOMER;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| CID   | varchar(10) | YES  |     | NULL    |       |
+| CNAME | varchar(25) | YES  |     | NULL    |       |
+| CPHNO | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+INSERT INTO CUSTOMER VALUES('C1','ARUP','34443');
+SELECT * FROM CUSTOMER;
+mysql> SELECT * FROM CUSTOMER;
++------+-------+-------+
+| CID  | CNAME | CPHNO |
++------+-------+-------+
+| C1   | ARUP  | 34443 |
++------+-------+-------+
+CREATE TABLE EMP
+(EID VARCHAR(10),
+ ENAME VARCHAR(25) NOT NULL,
+ JOB   VARCHAR(25),
+ SAL   DECIMAL,
+ COMM  DECIMAL,
+ HIREDATE DATE,
+ DEPTNO VARCHAR(10),
+CONSTRAINT EMP_EID_PK PRIMARY KEY(EID));
+mysql> DESC EMP;
++----------+---------------+------+-----+---------+-------+
+| Field    | Type          | Null | Key | Default | Extra |
++----------+---------------+------+-----+---------+-------+
+| EID      | varchar(10)   | NO   | PRI | NULL    |       |
+| ENAME    | varchar(25)   | NO   |     | NULL    |       |
+| JOB      | varchar(25)   | YES  |     | NULL    |       |
+| SAL      | decimal(10,0) | YES  |     | NULL    |       |
+| COMM     | decimal(10,0) | YES  |     | NULL    |       |
+| HIREDATE | date          | YES  |     | NULL    |       |
+| DEPTNO   | varchar(10)   | YES  |     | NULL    |       |
++----------+---------------+------+-----+---------+-------+
+INSERT INTO EMP VALUES('E1','SUMAN','CLERK',25000,2000,CURRENT_DATE,'10');
+SELECT * FROM EMP;
+mysql> SELECT * FROM EMP;
++-----+---------+---------+-------+-------+------------+--------+
+| EID | ENAME   | JOB     | SAL   | COMM  | HIREDATE   | DEPTNO |
++-----+---------+---------+-------+-------+------------+--------+
+| E1  | SUMAN   | CLERK   | 25000 |  2000 | 2025-08-08 | 10     |
+| E2  | ALOKE   | CLERK   | 27000 |  2500 | 2025-08-08 | 20     |
+| E3  | AYAN    | MANAGER | 50000 |  5000 | 2024-07-25 | 10     |
+| E4  | JAYANTA | MANAGER | 80000 | 10000 | 2024-06-24 | 20     |
+| E5  | JYOTI   | ANALYST | 65000 |  4000 | 2024-05-20 | 30     |
+| E6  | RUPALI  | ANALYST | 60000 |  4500 | 2024-05-15 | 20     |
++-----+---------+---------+-------+-------+------------+--------+
+SPECIFIC COLUMN
+====================================================================
+SELECT ENAME,JOB,SAL FROM EMP;
+RESTRICTION OF DATA
+=====================================================================
+SELECT * FROM EMP WHERE ENAME='SUMAN';
+SELECT * FROM EMP WHERE JOB='CLERK';
+==================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+

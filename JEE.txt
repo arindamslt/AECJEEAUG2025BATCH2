@@ -1,8 +1,11 @@
-MYSQL INSTALLATION
+MYSQL INSTALLATION IN WINDOWS OS
 ===============================================
 https://www.youtube.com/watch?v=0AF0w_OJyDs
 ===============================================
-
+MYSQL INSTALLATION IN MAC OS
+==============================================================
+https://www.youtube.com/watch?v=ODA3rWfmzg8
+==============================================================
 JDBC
 =======================================================
 MYSQLDRIVER
