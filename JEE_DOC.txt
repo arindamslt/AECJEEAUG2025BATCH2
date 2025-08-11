@@ -238,6 +238,311 @@ init()
 service()
 destroy()
 ===============================================
+http://localhost:8080/ServletDemo2/Customer.html
+calhost:8080/ServletDemo2/
+SERVLET TO SERVLET COMMUNICATION
+================================================================
+DBMS
+======================================
+DATABASE MANAGEMENT SYSTEM
+RDBMS
+======================================
+RELATIONAL DATABASE MANAGEMENT SYSTEM
+DATABASE
+=======================================
+DATABASE IS COLLECTION INTERELATED TABLES OR DATA
+ADVANTAGE DBMS OR RDBMS
+===================================
+1.MINIMIZE DATA REDUNDENCY
+2.SECURITY RESTRICTION IS THERE
+3.DATA CAN BE SHARED
+4.INTEGRITY CONSTRAINT TO BE MAINTAINED
+RDBMS
+=============================
+DATABASE+SQL(STRUCTED QUERY LANGUAGE)
+C++,JAVA====HLL(3RD GL)
+HOW PART
+WHAT PART
+SQL==4GL
+     NON PROCEDURAL LANGUAGE
+  SELECT * FROM STUDENT;
+WHAT PART IS KNOWN TO US
+HOW PART IS NOT KNOWN TO US
+PL/SQL
+RDBMS KIND SOFTWARE
+=========================
+ORACLE
+SQLSERVER
+MYSQL
+
+SQL  COMMAND
+============================================================
+1.DDL==DATA DEFINATION LANGUAGE
+        CREATE,ALTER,RENAME,TRUNCATE,DROP,PURGE
+2.DML==DATA MANIPULATION LANGUAGE
+        INSERT,UPDATE,DELETE,MERGE
+3.DATA RETRIEVAL
+    SELECT
+4.TCL==TRANSACTION CONTROL LANGUAGE
+        COMMIT,ROLLBACK,SAVEPOINT
+5.DCL==DATA CONTROL LANGUAGE
+       GRANT,REVOKE
+=======================================================================
+MYSQL DATA TYPE
+====================================================================
+VARCHAR
+CHAR
+NUMBER
+INT
+DECIMAL
+DATE
+TIMESTAMP
+
+SNAME CHAR(25)
+ ALOKE
+SNAME VARCHAR(25)
+NUMBER(5)===99999
+NUMBER(7,2)===99999.99
+DATE==YYYY-MM-DD
+=================================================================
+THREE WAYS
+====================================
+1.COMMAND PROMPT
+2.MYSQL WORKBENCH
+3.MYSQL COMMAND LINE CLIENT
+==============================================================================
+CONSTRAINT
+========================================================================
+BEFORE INSERTING ANY DATA YOU HAVE TO SATISFY SOME CONDITION
+PRIMARY KEY==IT CAN'T ACCEPT DUPLICATE AS WELL NULL VALUE
+UNIQUE KEY==IT ACCEPT THE NULL VALUE BUT DOES NOT ACCEPT DUPLICATE VALUE
+NOT NULL==IT CAN'T LEFT BLANK TO THE FIELD
+CHECK
+FOREIGN KEY
+==============================================================================
+DATE:11.08.2025
+========================================================================================
+mysql>SHOW DATABASES;
+CREATE  DATABASE DBSTJEE;
+USE DBSTJEE;
+SHOW TABLES;
+CREATE TABLE CUSTOMER
+(CID VARCHAR(10),
+ CNAME VARCHAR(25),
+ CPHNO VARCHAR(10));
+DESC CUSTOMER;
+mysql> DESC CUSTOMER;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| CID   | varchar(10) | YES  |     | NULL    |       |
+| CNAME | varchar(25) | YES  |     | NULL    |       |
+| CPHNO | varchar(10) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+INSERT INTO CUSTOMER VALUES('C1','ARUP','34443');
+SELECT * FROM CUSTOMER;
+mysql> SELECT * FROM CUSTOMER;
++------+-------+-------+
+| CID  | CNAME | CPHNO |
++------+-------+-------+
+| C1   | ARUP  | 34443 |
++------+-------+-------+
+CREATE TABLE EMP
+(EID VARCHAR(10),
+ ENAME VARCHAR(25) NOT NULL,
+ JOB   VARCHAR(25),
+ SAL   DECIMAL,
+ COMM  DECIMAL,
+ HIREDATE DATE,
+ DEPTNO VARCHAR(10),
+CONSTRAINT EMP_EID_PK PRIMARY KEY(EID));
+mysql> DESC EMP;
++----------+---------------+------+-----+---------+-------+
+| Field    | Type          | Null | Key | Default | Extra |
++----------+---------------+------+-----+---------+-------+
+| EID      | varchar(10)   | NO   | PRI | NULL    |       |
+| ENAME    | varchar(25)   | NO   |     | NULL    |       |
+| JOB      | varchar(25)   | YES  |     | NULL    |       |
+| SAL      | decimal(10,0) | YES  |     | NULL    |       |
+| COMM     | decimal(10,0) | YES  |     | NULL    |       |
+| HIREDATE | date          | YES  |     | NULL    |       |
+| DEPTNO   | varchar(10)   | YES  |     | NULL    |       |
++----------+---------------+------+-----+---------+-------+
+INSERT INTO EMP VALUES('E1','SUMAN','CLERK',25000,2000,CURRENT_DATE,'10');
+SELECT * FROM EMP;
+mysql> SELECT * FROM EMP;
++-----+---------+---------+-------+-------+------------+--------+
+| EID | ENAME   | JOB     | SAL   | COMM  | HIREDATE   | DEPTNO |
++-----+---------+---------+-------+-------+------------+--------+
+| E1  | SUMAN   | CLERK   | 25000 |  2000 | 2025-08-08 | 10     |
+| E2  | ALOKE   | CLERK   | 27000 |  2500 | 2025-08-08 | 20     |
+| E3  | AYAN    | MANAGER | 50000 |  5000 | 2024-07-25 | 10     |
+| E4  | JAYANTA | MANAGER | 80000 | 10000 | 2024-06-24 | 20     |
+| E5  | JYOTI   | ANALYST | 65000 |  4000 | 2024-05-20 | 30     |
+| E6  | RUPALI  | ANALYST | 60000 |  4500 | 2024-05-15 | 20     |
++-----+---------+---------+-------+-------+------------+--------+
+SPECIFIC COLUMN
+====================================================================
+SELECT ENAME,JOB,SAL FROM EMP;
+RESTRICTION OF DATA
+=====================================================================
+SELECT * FROM EMP WHERE ENAME='SUMAN';
+SELECT * FROM EMP WHERE JOB='CLERK';
+==================================================================
+CREATE TABLE DEPT
+(DEPTNO VARCHAR(10),
+ DNAME  VARCHAR(25) NOT NULL,
+ LOC    VARCHAR(25) NOT NULL,
+CONSTRAINT DEPT_DEPTNO_PK PRIMARY KEY(DEPTNO)
+);
+DESC DEPT;
+
+mysql> DESC DEPT;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| DEPTNO | varchar(10) | NO   | PRI | NULL    |       |
+| DNAME  | varchar(25) | NO   |     | NULL    |       |
+| LOC    | varchar(25) | NO   |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+INSERT INTO DEPT VALUES('10','MKTG','KOLKATA');
+INSERT INTO DEPT VALUES('20','FINANCE','MUMBAI');
+INSERT INTO DEPT VALUES('30','IT','DELHI');
+INSERT INTO DEPT VALUES('40','OPERATIONS','CHENNAI');
+
+mysql> SELECT * FROM DEPT;
++--------+------------+---------+
+| DEPTNO | DNAME      | LOC     |
++--------+------------+---------+
+| 10     | MKTG       | KOLKATA |
+| 20     | FINANCE    | MUMBAI  |
+| 30     | IT         | DELHI   |
+| 40     | OPERATIONS | CHENNAI |
++--------+------------+---------+
+4 rows in set (0.00 sec)
+DATA RETRIEVAL
+================================================================================
+ALLL ROWS FROM TABLE
+SELECT * FROM EMP;
+mysql> SELECT * FROM EMP;
++-----+---------+---------+-------+-------+------------+--------+
+| EID | ENAME   | JOB     | SAL   | COMM  | HIREDATE   | DEPTNO |
++-----+---------+---------+-------+-------+------------+--------+
+| E1  | SUMAN   | CLERK   | 25000 |  2000 | 2025-08-08 | 10     |
+| E2  | ALOKE   | CLERK   | 27000 |  2500 | 2025-08-08 | 20     |
+| E3  | AYAN    | MANAGER | 50000 |  5000 | 2024-07-25 | 10     |
+| E4  | JAYANTA | MANAGER | 80000 | 10000 | 2024-06-24 | 20     |
+| E5  | JYOTI   | ANALYST | 65000 |  4000 | 2024-05-20 | 30     |
+| E6  | RUPALI  | ANALYST | 60000 |  4500 | 2024-05-15 | 20     |
++-----+---------+---------+-------+-------+------------+--------+
+SPECIFIC COLUMN
+SELECT ENAME,JOB,SAL FROM EMP;
+RESTRICTION OF DATA
+==========================================
+IT IS DONE BY WHERE CLAUSE
+SELECT * FROM EMP WHERE ENAME='JAYANTA';
+SELECT * FROM EMP WHERE JOB='CLERK';
+SELECT * FROM EMP WHERE SAL >60000;
+IN CLAUSE
+========================================================================
+SELECT * FROM EMP WHERE JOB IN('CLERK','ANALYST');
+SELECT * FROM EMP WHERE JOB NOT IN('CLERK','ANALYST');
+==========================================================================
+AND OPERATOR
+SELECT * FROM EMP WHERE JOB='CLERK' AND SAL>25000;
+SELECT * FROM EMP WHERE JOB='CLERK' OR SAL>25000;
+===========================================================================
+LIKE OPERATOR
+==============================================================================
+SELECT * FROM EMP WHERE ENAME LIKE 'S%';
+SELECT * FROM EMP WHERE ENAME LIKE '_L%';
+SELECT * FROM EMP WHERE ENAME LIKE '%I';
+SELECT * FROM EMP WHERE ENAME LIKE '%A%';
+============================================================================
+ARITHMETIC OPERATOR
++,-,*,/
+SELECT ENAME,JOB,SAL,COMM,SAL+COMM FROM EMP;
+COLUMN ALIAS
+=================================================
+SELECT ENAME,JOB,SAL,COMM,SAL+COMM TOTALSAL FROM EMP;
+================================================================================
+SORTING OF DATA
+======================================================================================
+SELECT *  FROM EMP ORDER BY ENAME;
+SELECT * FROM EMP ORDER BY SAL DESC;
+SELECT * FROM EMP ORDER BY SAL DESC LIMIT 2;
+SELECT * FROM EMP ORDER BY HIREDATE  LIMIT 2;
+=======================================================================================
+SELECT * FROM DEPT;
+mysql> SELECT * FROM DEPT;
++--------+------------+---------+
+| DEPTNO | DNAME      | LOC     |
++--------+------------+---------+
+| 10     | MKTG       | KOLKATA |
+| 20     | FINANCE    | MUMBAI  |
+| 30     | IT         | DELHI   |
+| 40     | OPERATIONS | CHENNAI |
++--------+------------+---------+
+UPDATE
+===================================================
+UPDATE DEPT SET DNAME='PLANNING',LOC='BANAGALORE' WHERE DEPTNO='40';
+SELECT * FROM DEPT;
+DELETE DATA
+=============================================================
+DELETE FROM DEPT WHERE DEPTNO='40';
+SELECT * FROM DEPT;
+
+================================================================
+DUPLICATE TABLE CREATION
+==============================================================
+CREATE TABLE DEPT1 AS SELECT * FROM DEPT;
+SELECT * FROM DEPT1;
+DESC DEPT;
+DESC DEPT1;
+DUPLICATE TABLE WITHOUT DATA
+===========================================================================
+CREATE TABLE DEPT2 AS SELECT * FROM DEPT WHERE 1=2;
+=========================================================================
+DESC EMP;
+DESC DEPT;
+SELECT * FROM EMP;
+SELECT * FROM DEPT;
+JOINING
+===============================================================
+FETCHING THE DATA FROM MULTIPLE TABLES
+TYPES OF JOINING
+==================================================================================
+1.EQUI JOIN
+======================================================================================
+BOTH THE TABLES COMMON DATA
+2.OUTER JOIN
+========================================================================================
+LEFT OUTER JOIN
+RIGHT OUTER JOIN
+FULL OUTER JOIN
+3.NON EQUI JOIN
+4.SELF JOIN
+ENAME JOB SAL COMM DEPTNO DNAME LOC
+SELECT E.ENAME,E,JOB,E.SAL,D.DEPTNO,D.DNAME.D.LOC
+FROM EMP E,DEPT D
+WHERE E.DEPTNO=D.DEPTNO AND
+D.LOC='KOLKATA';
+VIEW
+====================================================================
+LOGICAL STRUCTURE OF TABLE
+BUT IT DOESN'T STORE THE DATA
+CREATE VIEW EMP_DEPT_VW
+AS
+SELECT E.ENAME,E.JOB,E.SAL,D.DEPTNO,D.DNAME,D.LOC
+FROM EMP E,DEPT D
+WHERE E.DEPTNO=D.DEPTNO;
+SELECT * FROM EMP_DEPT_VW;
+============================================================
+
+
+
 
 
 
