@@ -220,7 +220,11 @@ VARCHAR(25)
 ========================================================================
 CONSTRAINT
 =========================================================================
-
+PRIMARY KEY:IT DOES NOT ACCEPT NULL VALUES AS WELL AS DUPLICATE VALUE
+UNIQUE KEY:IT DOES NOT ACCEPT DUPLICATE VALUE BUT ACCEPT THE NULL VALUE
+NOT NULL:YOU CAN'T LEFT BLANK TO THE FIELD
+CHECK: YOU TO SATISFY THE PREDEFINED VALUES
+FOREIGN KEY:IT SUPPORT ONLY OTHER TABLES PRIMARY KEY VALUE
 
 SERVLET
 ==========================================================================
@@ -642,10 +646,73 @@ application
 page
 pageContext
 ==========================================================================
+DATE:13.08.2025
+==========================================================================
+SESSION MANAGEMENT
+=============================================================================
+IT IS DONE BY FOUR WAYS
+===========================================
+1.URL REWRITTING
+2.SESSION
+3.COOKIES
+4.INPUT FROM HIDDEN FIELDS
+============================================================================
+ERROR OR EXCEPTION HANDELLING IN JSP PAGE
+=========================================================================================
+JSTL
+================================================================================
+JAVA SERVER PAGES TAG LIBRARY
+======================================================================
+JSTL.JAR
+TYPES OF TAG
+=================================================
+1.CORE TAG
+========================================================
+<c:out>====PRINTING THE VALUE
+<C:forEach>====IT IS USED FOR LOOP
 
+2.FORMATTING
+3.SQL TAG
+4.XML TAG
+=============================================================
+PROJECT IMPLEMENTATION
+==========================================================================
+MONOLIHIC PROJECT
+========================================================================
+DESIGN PATTERN
+===========================================================================
+WELL APPROVED SOLUTION
+MVC DESIGN PATTERN
+M===MODEL
+V==VIEW
+C==CONTROLLER
+PROJECT
+=====================
+ADMIN
+CLIENT
+CREATE DATABASE FOODSAPPDB;
+mysql> USE FOODSAPPDB;
+Database changed
+mysql> SHOW TABLES;
+Empty set (0.02 sec)
 
+mysql> CREATE TABLE FOOD
+    -> (FID VARCHAR(10),
+    ->  FNAME VARCHAR(25) NOT NULL,
+    ->  PRICE  DECIMAL,
+    -> CONSTRAINT FOOD_FID_PK PRIMARY KEY(FID)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
 
-
+mysql> DESC FOOD;
++-------+---------------+------+-----+---------+-------+
+| Field | Type          | Null | Key | Default | Extra |
++-------+---------------+------+-----+---------+-------+
+| FID   | varchar(10)   | NO   | PRI | NULL    |       |
+| FNAME | varchar(25)   | NO   |     | NULL    |       |
+| PRICE | decimal(10,0) | YES  |     | NULL    |       |
++-------+---------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
 
 
 
