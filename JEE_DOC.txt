@@ -686,10 +686,19 @@ MVC DESIGN PATTERN
 M===MODEL
 V==VIEW
 C==CONTROLLER
+DAO DTO DESIGN PATTERN
+=================================================================================
+DAO==DATA ACCESS OBJECT
+DTO==DATA TRANSFER OBJECT
+==================================================================================
 PROJECT
 =====================
+PROJECT NAME:FOODAPP
+USER
+=================================
 ADMIN
 CLIENT
+================================
 CREATE DATABASE FOODSAPPDB;
 mysql> USE FOODSAPPDB;
 Database changed
@@ -713,6 +722,9 @@ mysql> DESC FOOD;
 | PRICE | decimal(10,0) | YES  |     | NULL    |       |
 +-------+---------------+------+-----+---------+-------+
 3 rows in set (0.01 sec)
+=================================================================
+DATE:14.08.2025
+=========================================================================================
 
 
 
