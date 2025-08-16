@@ -725,7 +725,20 @@ mysql> DESC FOOD;
 =================================================================
 DATE:14.08.2025
 =========================================================================================
-
+CREATE TABLE REGISTER
+(UNAME  VARCHAR(15),
+ PASS   VARCHAR(10) NOT NULL,
+ NM     VARCHAR(25) NOT NULL,
+ CONSTRAINT REGISTER_UNAME_PK PRIMARY KEY(UNAME)
+);
+mysql> DESC REGISTER;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| UNAME | varchar(15) | NO   | PRI | NULL    |       |
+| PASS  | varchar(10) | NO   |     | NULL    |       |
+| NM    | varchar(25) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
 
 
 
