@@ -739,9 +739,91 @@ mysql> DESC REGISTER;
 | PASS  | varchar(10) | NO   |     | NULL    |       |
 | NM    | varchar(25) | NO   |     | NULL    |       |
 +-------+-------------+------+-----+---------+-------+
+DATE:18.08.2025
+===============================================================================
+mysql> SELECT * FROM REGISTER WHERE UNAME='suman123' and pass='1234';
++----------+------+-------+
+| UNAME    | PASS | NM    |
++----------+------+-------+
+| suman123 | 1234 | SUMAN |
++----------+------+-------+
+1 row in set (0.00 sec)
+==============================================================================
+CREATE TABLE ORDERDTLS
+(OID INT PRIMARY KEY AUTO_INCREMENT,
+ ODT DATE DEFAULT (CURRENT_DATE()),
+ FID VARCHAR(10) NOT NULL,
+ QTY INT,
+ UNAME VARCHAR(15)
+);
+====================================================================================== 
+mysql> DESC ORDERDTLS;
++-------+-------------+------+-----+-----------+-------------------+
+| Field | Type        | Null | Key | Default   | Extra             |
++-------+-------------+------+-----+-----------+-------------------+
+| OID   | int         | NO   | PRI | NULL      | auto_increment    |
+| ODT   | date        | YES  |     | curdate() | DEFAULT_GENERATED |
+| FID   | varchar(10) | NO   |     | NULL      |                   |
+| QTY   | int         | YES  |     | NULL      |                   |
+| UNAME | varchar(15) | YES  |     | NULL      |                   |
++-------+-------------+------+-----+-----------+-------------------+
+5 rows in set (0.00 sec)
+OrderServe===SERVLET
+OrderDto=====DTO
+OrderDao=====DAO===ONLY INSERTDATA
+mysql> SELECT * FROM ORDERDTLS;
++-----+------------+-----+------+----------+
+| OID | ODT        | FID | QTY  | UNAME    |
++-----+------------+-----+------+----------+
+|   1 | 2025-08-18 | F1  |    2 | suman123 |
++-----+------------+-----+------+----------+
 
+mysql> DESC FOOD;
++-------+---------------+------+-----+---------+-------+
+| Field | Type          | Null | Key | Default | Extra |
++-------+---------------+------+-----+---------+-------+
+| FID   | varchar(10)   | NO   | PRI | NULL    |       |
+| FNAME | varchar(25)   | NO   |     | NULL    |       |
+| PRICE | decimal(10,0) | YES  |     | NULL    |       |
++-------+---------------+------+-----+---------+-------+
+3 rows in set (0.02 sec)
 
+mysql> DESC ORDERDTLS;
++-------+-------------+------+-----+-----------+-------------------+
+| Field | Type        | Null | Key | Default   | Extra             |
++-------+-------------+------+-----+-----------+-------------------+
+| OID   | int         | NO   | PRI | NULL      | auto_increment    |
+| ODT   | date        | YES  |     | curdate() | DEFAULT_GENERATED |
+| FID   | varchar(10) | NO   |     | NULL      |                   |
+| QTY   | int         | YES  |     | NULL      |                   |
+| UNAME | varchar(15) | YES  |     | NULL      |                   |
++-------+-------------+------+-----+-----------+-------------------+
+SELECT O.OID,O.ODT,O.FID,F.FNAME,O.QTY,F.PRICE,F.PRICE*O.QTY NETPRICE,O.UNAME
+FROM FOOD F,ORDERDTLS O
+WHERE F.FID=O.FID;
 
+mysql> SELECT O.OID,O.ODT,O.FID,F.FNAME,O.QTY,F.PRICE,F.PRICE*O.QTY NETPRICE,O.UNAME
+    -> FROM FOOD F,ORDERDTLS O
+    -> WHERE F.FID=O.FID;
++-----+------------+-----+-----------+------+-------+----------+----------+
+| OID | ODT        | FID | FNAME     | QTY  | PRICE | NETPRICE | UNAME    |
++-----+------------+-----+-----------+------+-------+----------+----------+
+|   1 | 2025-08-18 | F1  | FRIEDRICE |    2 |   500 |     1000 | suman123 |
++-----+------------+-----+-----------+------+-------+----------+----------+
+CREATE VIEW BILLING
+AS
+SELECT O.OID,O.ODT,O.FID,F.FNAME,O.QTY,F.PRICE,F.PRICE*O.QTY NETPRICE,O.UNAME
+FROM FOOD F,ORDERDTLS O
+WHERE F.FID=O.FID;
+
+SELECT * FROM BILLING;
+mysql> SELECT * FROM BILLING;
++-----+------------+-----+-----------+------+-------+----------+----------+
+| OID | ODT        | FID | FNAME     | QTY  | PRICE | NETPRICE | UNAME    |
++-----+------------+-----+-----------+------+-------+----------+----------+
+|   1 | 2025-08-18 | F1  | FRIEDRICE |    2 |   500 |     1000 | suman123 |
++-----+------------+-----+-----------+------+-------+----------+----------+
+SELECT * FROM BILLING WHERE UNAME='suman123';
 
 
 
